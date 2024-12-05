@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Apartamento 1",
+    "price": 700000,
+    "address": "Jardim Atlântico",
+    "beds": 3,
+    "baths": 2,
+    "sqft": 150,
+    "yearBuilt": 2013,
+    "status": "Venda",
+    "type": "Apartamento",
+    "location": "Residencial+New+Park",
+    "images": [
+      "/images/aps/ap1/foto1.jpg",
+      "/images/aps/ap1/foto2.jpg",
+      "/images/aps/ap1/foto3.jpg",
+      "/images/aps/ap1/foto4.jpg"
+    ],
+    "description": "Vai ficar no apartamento além de todos os moveis planejados\n Geladeira\n Máquina levar e secar\n Máquina lavar louça\n Fogão\n Micro ondas\n Forno elétrico\n Bebedouro\n Churrasqueira embutida\n TV da sala\n Mesa jantar sofá",
+    "details:": "24 andar",
+    "amenities": ["2 vagas de garagens", "Piscina", "Academia"],
+    "agent": {
+      "name": "Corretor Fulano de Tal",
+      "phone": "(62) 99999-9999",
+      "email": "contato@mundialimoveisgo.com.br"
+    }
+  }
+]
