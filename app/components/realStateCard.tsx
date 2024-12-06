@@ -1,13 +1,19 @@
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "~/components/ui/card";
-import {Badge} from "~/components/ui/badge";
-import type {RealState} from "~/types";
-import {Link} from "react-router";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "~/components/ui/card";
+import { Badge } from "~/components/ui/badge";
+import type { RealState } from "~/types";
+import { Link } from "react-router";
 
 interface RealStateCardProps {
   realState: RealState;
 }
 
-export function RealStateCard({realState: realState}: RealStateCardProps) {
+export function RealStateCard({ realState: realState }: RealStateCardProps) {
   return (
     <Card className="h-full flex flex-col">
       <div className="relative aspect-[16/9] overflow-hidden rounded-t-lg">
@@ -21,7 +27,9 @@ export function RealStateCard({realState: realState}: RealStateCardProps) {
       <CardHeader>
         <CardTitle className="flex justify-between items-start">
           <span className="text-xl">{realState.title}</span>
-          <span className="text-xl font-bold text-primary">R$ {realState.price.toLocaleString()}</span>
+          <span className="text-xl font-bold text-primary">
+            R$ {realState.price.toLocaleString()}
+          </span>
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
@@ -41,7 +49,8 @@ export function RealStateCard({realState: realState}: RealStateCardProps) {
       <CardFooter>
         <Link
           to={`/imoveis/${realState.id}`}
-          className="w-full text-center bg-primary text-primary-foreground rounded-md py-2 hover:bg-primary/90 transition-colors">
+          className="w-full text-center bg-primary text-primary-foreground rounded-md py-2 hover:bg-primary/90 transition-colors"
+        >
           Ver detalhes
         </Link>
       </CardFooter>

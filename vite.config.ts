@@ -1,11 +1,11 @@
-import {vitePluginViteNodeMiniflare} from "@hiogawa/vite-node-miniflare";
-import {reactRouter} from "@react-router/dev/vite";
+import { vitePluginViteNodeMiniflare } from "@hiogawa/vite-node-miniflare";
+import { reactRouter } from "@react-router/dev/vite";
 import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
-import {defineConfig} from "vite";
+import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-export default defineConfig(({isSsrBuild}) => ({
+export default defineConfig(({ isSsrBuild }) => ({
   build: {
     rollupOptions: isSsrBuild
       ? {

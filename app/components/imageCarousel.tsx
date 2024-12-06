@@ -1,5 +1,5 @@
-import {useState} from "react";
-import {Card} from "~/components/ui/card";
+import { useState } from "react";
+import { Card } from "~/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -7,14 +7,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "~/components/ui/carousel";
-import {cn} from "~/lib/utils";
+import { cn } from "~/lib/utils";
 
 interface ImageCarouselProps {
   images: string[];
   className?: string;
 }
 
-export function ImageCarousel({images, className}: ImageCarouselProps) {
+export function ImageCarousel({ images, className }: ImageCarouselProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
@@ -32,7 +32,8 @@ export function ImageCarousel({images, className}: ImageCarouselProps) {
           align: "start",
           loop: true,
         }}
-        className="w-full">
+        className="w-full"
+      >
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index} className="basis-1/4 md:basis-1/6">
@@ -41,8 +42,13 @@ export function ImageCarousel({images, className}: ImageCarouselProps) {
                   "cursor-pointer rounded-lg overflow-hidden",
                   selectedIndex === index && "ring-2 ring-primary"
                 )}
-                onClick={() => setSelectedIndex(index)}>
-                <img src={image} alt={`Thumbnail ${index + 1}`} className="aspect-square object-cover" />
+                onClick={() => setSelectedIndex(index)}
+              >
+                <img
+                  src={image}
+                  alt={`Thumbnail ${index + 1}`}
+                  className="aspect-square object-cover"
+                />
               </div>
             </CarouselItem>
           ))}

@@ -1,21 +1,29 @@
-import {useNavigate} from "react-router";
-import {Card, CardContent, CardHeader, CardTitle} from "~/components/ui/card";
-import {Badge} from "~/components/ui/badge";
-import {Button} from "~/components/ui/button";
-import {Phone, Mail, ArrowLeft, BedDouble, Bath, Check, Ruler} from "lucide-react";
-import type {RealState as RealState} from "~/types";
-import type {Route} from "./+types/details";
+import { useNavigate } from "react-router";
+import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
+import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
+import {
+  Phone,
+  Mail,
+  ArrowLeft,
+  BedDouble,
+  Bath,
+  Check,
+  Ruler,
+} from "lucide-react";
+import type { RealState as RealState } from "~/types";
+import type { Route } from "./+types/details";
 import json from "~/data.json";
-import {useState} from "react";
-import {Dialog, DialogContent} from "~/components/ui/dialog";
-import {ImageCarousel} from "~/components/imageCarousel";
-import {Location} from "~/components/location";
+import { useState } from "react";
+import { Dialog, DialogContent } from "~/components/ui/dialog";
+import { ImageCarousel } from "~/components/imageCarousel";
+import { Location } from "~/components/location";
 
-export async function loader({params}: Route.LoaderArgs) {
+export async function loader({ params }: Route.LoaderArgs) {
   return json.find((rs) => rs.id === Number(params.id)) as RealState;
 }
 
-export default function RealStateDetails({loaderData}: Route.ComponentProps) {
+export default function RealStateDetails({ loaderData }: Route.ComponentProps) {
   const property = loaderData as RealState;
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
@@ -32,7 +40,9 @@ export default function RealStateDetails({loaderData}: Route.ComponentProps) {
         <div className="flex items-center gap-4">
           <Badge>{property.type}</Badge>
           <Badge variant="secondary">{property.status}</Badge>
-          <span className="text-2xl font-bold text-primary">R$ {property.price.toLocaleString()}</span>
+          <span className="text-2xl font-bold text-primary">
+            R$ {property.price.toLocaleString()}
+          </span>
         </div>
       </div>
       {/* Content Grid */}
@@ -154,8 +164,13 @@ export default function RealStateDetails({loaderData}: Route.ComponentProps) {
                     className={`flex-shrink-0 w-20 h-20 rounded-md overflow-hidden cursor-pointer ${
                       selectedImage === image ? "ring-2 ring-primary" : ""
                     }`}
-                    onClick={() => setSelectedImage(image)}>
-                    <img src={image} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
+                    onClick={() => setSelectedImage(image)}
+                  >
+                    <img
+                      src={image}
+                      alt={`Thumbnail ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 ))}
               </div>

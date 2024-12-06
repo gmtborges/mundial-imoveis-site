@@ -12,13 +12,22 @@ export function Header() {
 
           {/* Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="/" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <a
+              href="/"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               Início
             </a>
-            <a href="/sobre-nos" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <a
+              href="/sobre-nos"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               Sobre Nós
             </a>
-            <a href="/contato" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <a
+              href="/contato"
+              className="text-gray-700 hover:text-gray-900 transition-colors"
+            >
               Contato
             </a>
           </nav>
@@ -32,7 +41,8 @@ export function Header() {
               strokeLinejoin="round"
               strokeWidth="2"
               viewBox="0 0 24 24"
-              stroke="currentColor">
+              stroke="currentColor"
+            >
               <path d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
